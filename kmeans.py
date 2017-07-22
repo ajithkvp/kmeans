@@ -81,7 +81,7 @@ def initialize_centroids():
 
     print("Centroids\leader initialized at:")
     for i in range(3):
-        print("(", centroids[i].get_x(), ", ", centroids[i].get_y(), ")")
+        print "(", centroids[i].get_x(), ", ", centroids[i].get_y(), ")"
         print()
 
 
@@ -163,10 +163,10 @@ def perform_kmeans():
 
 def print_result():
     for i in range(cnum):
-        print("Shirt size:",i+1,"includes leader:(",centroids[i].get_x(),",",centroids[i].get_y(),")")
+        print "Shirt size:",i+1,"includes leader:(",centroids[i].get_x(),",",centroids[i].get_y(),")"
         for j in range(totaldata):
             if(data[j].get_cluster()==i):
-                print("(",data[j].get_x(),",",data[j].get_y(),")")
+                print "(",data[j].get_x(),",",data[j].get_y(),")"
         print()
 	for i in range(totaldata):
 		plt.plot(X[i][0],X[i][1],colors[data[i].get_cluster()],markersize=10)

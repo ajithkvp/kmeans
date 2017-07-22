@@ -92,9 +92,9 @@ def initialize_centroids():
     p1 = Centroids(samples[samplept3][1], 0.0)
     centroids.append(p1)
 
-    print("Centroids\leader initialized at:")
+    print "Centroids\leader initialized at:"
     for i in range(3):
-        print( centroids[i].get_x())
+        print centroids[i].get_x()
 
 
 def initialize_data():
@@ -175,10 +175,11 @@ def perform_kmeans():
 
 def print_result():
     for i in range(cnum):
-        print("Cluster:",i+1,"includes leader:",centroids[i].get_x())
+        print "---------------------------------------------"
+        print "Cluster:",i+1,"includes leader:",centroids[i].get_x()
         for j in range(totaldata):
             if(data[j].get_cluster()==i):
-                print(data[j].get_name(),":",data[j].get_x())
+                print data[j].get_name(),":",data[j].get_x()
 	for i in range(totaldata):
 		plt.plot(X[i][0],X[i][1],colors[data[i].get_cluster()],markersize=5)
 	cent=np.array(centroids1)
